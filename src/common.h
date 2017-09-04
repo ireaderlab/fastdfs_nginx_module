@@ -69,7 +69,7 @@ typedef int (*FDFSSendFile)(void *arg, const char *filename, \
 	const int filename_len, const int64_t file_offset, \
 	const int64_t download_bytes);
 
-typedef int (*FDFSProxyHandler)(void *arg, const char *dest_ip_addr);
+typedef int (*FDFSProxyHandler)(ngx_http_request_t *r, const char *dest_ip_addr);
 
 struct fdfs_http_response {
 	int status;  //HTTP status
